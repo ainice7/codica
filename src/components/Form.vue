@@ -71,12 +71,22 @@ export default {
 .inputs-container {
   display: flex;
   padding-top: 20px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
   .input-field {
     margin: 0 20px;
     width: 25%;
+    @media screen and (max-width: 768px) {
+      margin: 10px 0;
+      width: 100%;
+    }
   }
   button {
     margin: 0 10px;
+    @media screen and (max-width: 768px) {
+      margin: 10px 0;
+    }
   }
 }
 </style>

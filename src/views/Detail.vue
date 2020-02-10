@@ -20,15 +20,15 @@
         </div>
         <div>Pressure: {{city.main.pressure}} hPa</div>
         <div>Wind Speed: {{city.wind.speed}}m/s</div>
-        <div class="btn-container">
-          <button 
-            class="waves-effect waves-light btn" 
-            @click="buttonHandler" 
-            v-html="buttonDetermination"
-          ></button>
-          <router-link to="/" tag="button" class="waves-effect waves-light btn">Go to main page</router-link>
-        </div>
       </div>
+    </div>
+    <div class="btn-container">
+      <button 
+        class="waves-effect waves-light btn" 
+        @click="buttonHandler" 
+        v-html="buttonDetermination"
+      ></button>
+      <router-link to="/" tag="button" class="waves-effect waves-light btn">Go to main page</router-link>
     </div>
   </div>
 </template>
@@ -89,11 +89,18 @@ export default {
         text-transform: capitalize;
       }
     }
-    .btn-container {
-      display: flex;
-      flex-direction: column;
-      button {
-        margin-top: 20px;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      margin-top: 20px;
+      flex-direction: row;
+      justify-content: center;
+    }
+    button {
+      @media screen and (max-width: 768px) {
+        margin: 20px 10px 0;
       }
     }
   }

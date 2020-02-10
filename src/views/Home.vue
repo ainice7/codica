@@ -49,5 +49,8 @@ export default {
 .city-cards-container {
   display: flex;
   padding: 20px 0;
+  @media screen and (max-width: 768px) {
+    padding: 10px 0;
+  }
 }
 </style>

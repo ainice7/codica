@@ -40,7 +40,13 @@ export default {
   border-radius: 20px;
   text-align: center;
   color: black;
+  @media screen and (max-width: 768px) {
+    margin: 0 5px;
+  }
   cursor: pointer;
+  @media screen and (max-width: 1024px) {
+    border: 5px solid teal;
+  }
   &:hover {
     border: 5px solid teal;
     .city-options {
@@ -55,6 +61,13 @@ export default {
     left: 0;
     width: 100%;
     padding: 5px;
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      .material-icons {
+        color: teal;
+      }
+    }
     .material-icons:hover {
       color: teal;
     }
@@ -63,6 +76,9 @@ export default {
     font-size: 22px;
     margin: 10px 5px;
     align-self: stretch;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
   }
   .city-info {
     position: absolute;
@@ -72,6 +88,9 @@ export default {
     .icon-container {
       font-size: 50px;
       margin: 0 0 10px;
+      @media screen and (max-width: 768px) {
+        font-size: 35px;
+      }
     }
     .current-temperature {
       h4 {

@@ -53,6 +53,9 @@ export default {
     position:relative;
     .app-page{
       padding:2rem;
+      @media screen and (max-width: 768px) {
+        padding: 15px;
+      }
     }
   }
 }
